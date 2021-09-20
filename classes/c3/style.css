@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    /* main class */
+    /* layout - fixed width, responsive (media query), adaptive (based on user agent) */
+    /* width: 1200px;*/
+    width: calc(100% - 50px);
+    margin-top: 50px;
+    padding: 20px;
+    /* box-sizing: border-box; /* all properties in same width */
+    border: 5px solid red;
+    margin: 0 auto 100px;
+    font-family: Arial, Helvetica, sans-serif; /* if not present then browser's default font applied */
+    color: #000;
+    line-height: 1.4; /* ? */
+    font-size: 12px;
+    background-color: lightgray;
+    height: 100%;
+}
+
+.spanblock {
+    display: inline-block; /* can change the property of inline to block or vice-versa additionaly we can also change to inline-block */
+    padding-right: 10px;
+}
+.pinline {
+    display: inline;
+}
+
+.btn {
+    background-color: green;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 10px 20px 15px rgba(0, 0, 0, .4); /* text-shadow try */
+    padding: 10px 20px;
+    margin: 10px; /* top/bottom will aplly only if it will be inline-block or block */
+}
+/* HW: all attributes used it, wrapper => 3 column layout, all diffrenet colour, 20% padding for content with border
+middle one => 20 px gap with each side .
+alternate colour even/odd lines css.
+*/

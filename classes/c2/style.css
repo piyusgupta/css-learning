@@ -1,0 +1,72 @@
+* { /* universal selector to reset all default styling */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px; 
+    color: blue;
+    font-size: 16px; /* some will be inherited , some will not */
+    /* letter-spacing: 10px;
+    line-height: 1em; /* textual properties will mostly inherited */
+}
+
+/* type of selectors 
+    type selector
+    class selector
+    id selector
+    universal selector
+    pseudo selector
+    sibling selector
+    child selector
+    nth selector (last, first, alternate)
+*/
+.bigtitle {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+#smalltitle {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+    margin: 10px; /* inline element or block element */
+    display: inline-block;
+    cursor:progress;
+}
+ a:hover { /* pseudo selector */
+    color: pink;
+    text-decoration: underline;
+ }
+
+ li+li {
+     background-color: grey;
+ }
+
+.classul ul > li {
+     margin: 15px;
+     padding: 20px; /* specificity weightage universal - 0, */
+ }
+
+ li:nth-child(2n+1) {
+    padding: 100px !important;
+    background-color: white;
+ }
+
+ li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+ }
+
+/* 
+.classul ul > li:nth-child(2) {
+    padding: 99px;
+} */
