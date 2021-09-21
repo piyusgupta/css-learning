@@ -10,7 +10,9 @@
 <body>
     <div class="wrapper">
         <div class="column">
-            <p>This is the 1st col of 3 column layout, I have content within this column.</p>
+            <!-- you can't put div/block level element inside p it will render outside -->
+            <p>This is the 1st col of 3 column layout, I have content within this column.<span class="box"></span><span style="display:block" class="clear"></span></p>
+            <div class="clear"></div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus nisi quos dolorem mollitia exercitationem sed praesentium vero atque asperiores nulla corporis inventore dignissimos quasi, illum doloremque, reprehenderit perferendis eveniet sit?</p>
             <ul class="ulclass">
                 <li>col1 - row 1</li>
@@ -22,6 +24,12 @@
         </div>
         <div class="column middle">
             <p>I am in column 2</p>
+            <div class="positioning">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos eligendi illo itaque libero veritatis dignissimos sed voluptate quaerat! Ipsa repellendus qui veniam magnam tempora incidunt repudiandae excepturi impedit corrupti.
+            </div>
+            <div class="positioning" style="top:-5px; left:30px">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos eligendi illo itaque libero veritatis dignissimos sed voluptate quaerat! Ipsa repellendus qui veniam magnam tempora incidunt repudiandae excepturi impedit corrupti.
+            </div>
             <span>Want to make a google search, <a href="https://www.google.com" target="_blank">Click me !</a></span>
             <table class="table">
                 <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
@@ -30,9 +38,9 @@
                 <tr><td>13</td><td>14</td><td>15</td><td>X</td></tr>
             </table>
         </div>
-        <div class="column">
+        <div class="column" style="position:relative;">
             <p>I am the last one, sabse chhota, sabse khota</p>
-            <div id="lastcontent">
+            <div id="lastcontent" style="position: absolute; background-color: aqua; width: 300px; height: 100px;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut saepe ipsa dignissimos? Quasi esse soluta nostrum dolores quisquam aperiam earum architecto repellendus? Commodi adipisci reprehenderit nulla maiores. Tenetur, totam hic?
             </div>
         </div>

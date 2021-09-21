@@ -1,30 +1,43 @@
+
+/* notes::after
+    * position: relative, static, absolute, fixed
+    Fixed position is from window
+    Absolute from parent if parent is set to relative else from body
+    —
+    HW: popup with image on left and show cart items
+*/
+
 html, body {
-    width: 1200px;
-    margin: 0 auto;
-    height: 675px;
+    height: 100%;
 }
 
-.wrapper { /* border-box example which will fix the outer size, all margin/padding inside*/
+.wrapper { /* border-box example which will fix the outer size, all margin/padding inside*/ 
+    width: 90%;
+    margin: 0 auto;
     padding: 10px 20px;
     border: 5px solid grey;
     height: 100%;
     box-sizing: border-box;
 }
 .column { /* inline-block example should render the element in a row */
-    width: 30%;
+    width: 32%;
     border: 2px solid sandybrown;
     height: 100%;
     border-radius: 4px;
     /* display:inline-block;*/
-    float: left;
+    float: left; /* right will invert the render 1=> 3 and 3=>1 */
     box-sizing: inherit;
+    margin-right: 2%;
+}
+.column:last-child {
+    margin-right: 0;
 }
 
 .middle {
-    margin: 0 20px;
+    /* margin: 0 20px;*/
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 div > p { /* nested type sselector */
@@ -69,13 +82,34 @@ a:hover {
 
 .table {
     border: 1px solid red;
+    /* border-collapse: collapse;*/
+    width: 100%;
 }
 
 .table > tr:nth-child(2n+1) {
     background-color: green;
 }
-.table > tr > td {
-    width: 64px;
+.table tr td {
+    width: 32px;
+    height: 32px;
     padding: 4x;
-    text-align: right;
+    text-align: center;
+    border: 2px solid grey;
+}
+
+.box {
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    background-color: khaki;
+}
+.clear {
+    clear:both;
+}
+
+.positioning {
+    position: relative;
+    left: 20px;
+    top: 30px;
 }
