@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    width: 1200px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    margin: auto;
+    position: relative;
+}
+.content {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 120px;
+    background-color: lightyellow;
+}
+
+.item {
+    width: 60%;
+    height: 120px;
+    margin: 10px auto;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+.item:nth-child(2n+2) {
+    background-color: lightgrey;
+}
+
+.profile {
+    float: right;
+    height: 64px;
+    width: 64px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.cart-btn {
+    float: right;
+}
