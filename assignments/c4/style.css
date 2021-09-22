@@ -1,9 +1,14 @@
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
+div {
+    box-sizing: border-box;
+}
 .wrapper {
     width: 1200px;
+    height: 100%;
     box-sizing: border-box;
     border: 2px solid grey;
     margin: auto;
@@ -11,19 +16,19 @@ html, body {
 }
 .content {
     position: absolute;
-    z-index: 2;
-    top: 50px;
-    left: 120px;
+    padding: 0 10px;
+    width: 50%;
+    left: 25%;
     background-color: lightyellow;
+    z-index: 1;
 }
 
 .item {
-    width: 60%;
-    height: 120px;
+    width: 100%;
     margin: 10px auto;
     border: 1px solid darkgray;
     border-radius: 4px;
-    padding: 5px 20px;
+    padding: 15px 20px;
 }
 
 .item:nth-child(2n+2) {
@@ -40,4 +45,13 @@ html, body {
 
 .cart-btn {
     float: right;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
