@@ -1,0 +1,61 @@
+
+/* 
+ HW: beautify the page using ul/ol/li.
+*/
+
+html, body {
+    height: 100%;
+    /* no width for window */
+}
+
+body {
+    background: url('images/Landscape-Color.jpeg') no-repeat;
+    /* background-size: contain; /* no pixelerate in contain, cover for spread */
+   /*  background-attachment: fixed;*/
+   background-size: auto 100%;
+}
+
+.wrapper {
+    width: 100%;
+    background: url('images/Landscape-Color.jpeg') no-repeat;
+    background-size: auto 100%;
+}
+
+.defaultlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.image-style {
+    margin: 30px 0;
+}
+
+.image-style li {
+    padding: 10px 50px;
+    /* background-image: url('../../assignments/c4/images/item2.png');*/
+    background-size:contain;
+    background-position: 10px center;
+    /* background-repeat: no-repeat; */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#83c783+17,52b152+33,005700+39,005700+56,005700+56,008a00+67,b4ddb4+71,b4ddb4+71,002400+100 */
+    background: rgb(131,199,131); /* Old browsers */
+    background: linear-gradient(to bottom,  rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,87,0,1) 39%,rgba(0,87,0,1) 56%,rgba(0,87,0,1) 56%,rgba(0,138,0,1) 67%,rgba(180,221,180,1) 71%,rgba(180,221,180,1) 71%,rgba(0,36,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.list1 {
+    list-style-type:circle;
+    list-style-position: inside;
+}
+
+.list2 {
+    list-style-type:lower-roman;
+    list-style-position: outside;
+}
+
+.list3 {
+    list-style-type:square;
+}
+
+.list4 {
+    list-style-image: url('../../assignments/c4/images/item1.png');
+    list-style-position: inside;
+}

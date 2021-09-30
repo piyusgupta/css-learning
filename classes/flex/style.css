@@ -1,0 +1,59 @@
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    height: 300px;
+}
+/* 
+    HW: Sep 29 2021 (3 col layout)
+    1st col = 200px (no expansion/shrink
+    2 more col with grow:2
+    in mobile it should be column
+    * image tile (float) implement inside
+    row - 2 button left/right in mobile top/botttom with 90% width
+*/
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .content {
+        flex-direction: column;
+    }
+  }
+
+.content {
+    background-color: bisque;
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    text-align: center; */
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.content div {
+    flex: 0 0 300px; /* grow, shrink, basis */
+    border: 1px solid red;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px; */
+}
+
+.content div:nth-of-type(1) {
+    /* flex-basis: 400px; /* minimum starting width */
+    /* flex-grow: 2; */
+}
+
+.content div:nth-of-type(2) {
+    /* flex-shrink: 2; */
+}
+
