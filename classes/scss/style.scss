@@ -1,0 +1,110 @@
+$font-family: Arial, Verdana, Sans-serif;
+
+$secondary-font-family: Times New Roman, Sans-serif;
+
+$primary-color: Green;
+
+$secondary-color: Red;
+
+
+body {
+    font: $font-family bold 16px/1.5;
+    background-color: $secondary-color;
+}
+
+div {
+    box-sizing: border-box;
+    background-color: $primary-color;
+    
+    p {
+        font-family: $secondary-font-family;
+        span {
+            color: $secondary-color;
+            // follow max 3 level nesting as best practice
+        }
+        a {
+            color: $primary-color;
+            &:hover { // & to ref parent selector else it will put a space default
+                color: $secondary-color;
+            }
+        }
+        a:hover {
+            // do something, alternate to upper type
+        }
+        input {
+            border: 1px solid red;
+            &[type="text"] { // inner type selector for input
+                text-color: $primary-color;
+            }
+            &[type="email"] {
+                text-color: $secondary-color;
+            }
+        }
+    }
+}
+// file starts with _ is used as partial file to get to css
+
+@mixin theme ($theme: red) {
+    background-color: $theme;
+    border: 1px solid $theme;
+    box-shadow: 10px 15px 10px rgba($theme, 0.6);
+}
+
+
+.container {
+    @include theme;
+}
+
+.container2 {
+    @include theme($theme: #112233)
+    // can be used in media query as well as passing vars as screen size
+}
+
+.container3 {
+    @include theme($theme: #332211)
+}
+
+@mixin phoneonly () {
+    @media (max-width: 640px){
+        @content
+    }
+}
+
+@mixin ipadonly () {
+    @media (max-width: 1024px){
+        @content
+    }
+}
+
+.heading{
+    font-size: 2rem;
+    @include phoneonly{
+        font-size: 1rem;
+    }
+    @include ipadonly{
+        font-size: 1.5rem;
+    }
+}
+
+.footer{
+    font: 2rem bold $font-family;
+    @include phoneonly {
+        font-size: 1rem;
+    }
+    @include ipadonly{
+        font-size: 1.5rem;
+    }
+}
+
+%extend-name {
+    box-sizing: border-box;
+    @include theme;
+}
+
+.wrapper {
+    @extend %extend-name;
+    padding: 10px;
+}
+.wrapper2 {
+    padding: 10px;
+}
