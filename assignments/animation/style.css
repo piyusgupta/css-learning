@@ -25,7 +25,7 @@
     background-color: white;
 }
 .center:hover .bar1 {
-	transform: rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
 }
 
 .center:hover .bar2 {
@@ -33,5 +33,5 @@
 }
 
 .center:hover .bar3 {
-	transform: rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
 }
