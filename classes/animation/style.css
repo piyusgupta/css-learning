@@ -1,0 +1,31 @@
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+}
+.content1 {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transform:rotate(45deg);
+    transform-origin: 30% 40%;
+}
+.box:hover .content1 {
+        transform: translate(100px, 45%) rotate(40deg);
+}
+
+.content2 {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transform: skew(30deg)
+}
+.content3 {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transform:scaleX(2);
+}
+
+/* HW: indian flag */
+

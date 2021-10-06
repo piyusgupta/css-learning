@@ -1,0 +1,37 @@
+.wrapper {
+    width: 400px;
+    height: 400px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: #1121a3;
+    height: 100%;
+    position: relative;
+}
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.bar {
+    align-items: center;
+    width: 81px;
+    margin: 6px;
+    border-radius: 4px;
+    height: 8px;
+    background-color: white;
+}
+.center:hover .bar1 {
+	transform: rotate(45deg);
+}
+
+.center:hover .bar2 {
+	display: none;
+}
+
+.center:hover .bar3 {
+	transform: rotate(-45deg);
+}
